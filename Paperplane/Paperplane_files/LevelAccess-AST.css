@@ -1,0 +1,157 @@
+/* Cross Browser Mixin */
+/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+.node-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.node-container > * {
+  max-width: calc(100% - 1em);
+  box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.node-container.green .ast-node-details {
+  border-color: #43A047;
+}
+.node-container.green .ast-node-highlight {
+  border-color: #43A047;
+  background: rgba(67, 160, 71, 0.14);
+}
+.node-container.green .ast-node-highlight > .tag {
+  background: #43A047;
+  color: #000;
+}
+.node-container.blue .ast-node-details {
+  border-color: #1976D2;
+}
+.node-container.blue .ast-node-highlight {
+  border-color: #1976D2;
+  background: rgba(25, 118, 210, 0.14);
+}
+.node-container.blue .ast-node-highlight > .tag {
+  background: #1976D2;
+  color: #FFF;
+}
+.node-container.red .ast-node-details {
+  border-color: #E53935;
+}
+.node-container.red .ast-node-highlight {
+  border-color: #E53935;
+  background: rgba(229, 57, 53, 0.14);
+}
+.node-container.red .ast-node-highlight > .tag {
+  background: #E53935;
+  color: #FFF;
+}
+.node-container.offscreen .ast-node-details, .node-container.yellow .ast-node-details {
+  border-color: #FFEB3B;
+}
+.node-container.offscreen .ast-node-highlight, .node-container.yellow .ast-node-highlight {
+  border-color: #FFEB3B;
+  background: rgba(255, 235, 59, 0.14);
+}
+.node-container.offscreen .ast-node-highlight > .tag, .node-container.yellow .ast-node-highlight > .tag {
+  background: #FFEB3B;
+  color: #000;
+}
+.node-container.offscreen .ast-node-highlight {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.ast-node-highlight {
+  position: relative;
+  display: inline-block;
+  border: 5px solid #2962FF;
+  border-bottom-width: 0;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 2px #FFF inset;
+  -moz-box-shadow: 0 0 0 2px #FFF, 0 0 0 2px #FFF inset;
+  -webkit-box-shadow: 0 0 0 2px #FFF, 0 0 0 2px #FFF inset;
+  z-index: 100000001;
+  min-height: 1em;
+  background: rgba(41, 98, 255, 0.14);
+}
+.ast-node-highlight.closed {
+  border-bottom-width: 5px;
+  border-radius: 4px;
+  z-index: 99999999;
+  overflow: hidden;
+}
+.ast-node-highlight span {
+  font-weight: bold;
+  padding: 0.5em;
+  display: block;
+  font-family: monospace;
+  font-size: 0.9em;
+  height: 100%;
+  margin-right: 8em;
+}
+.ast-node-highlight > .tag {
+  display: inline-block;
+  padding: 0 0.5em;
+  font-weight: bold;
+}
+.ast-node-highlight a {
+  display: block;
+  position: absolute;
+  right: 2px;
+  top: -6px;
+  width: 16px;
+  text-align: center;
+  color: #000;
+  text-shadow: -1px 1px 0 #FFF, -1px -1px 0 #FFF, 1px 1px 0 #FFF, 1px -1px 0 #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: none;
+}
+.ast-node-highlight a.collapsed {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.ast-node-details {
+  font-size: 12px !important;
+  padding: 2em 1em;
+  position: absolute;
+  margin-top: -5px;
+  background: #EEE;
+  border: 5px solid #000;
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 2px #FFF inset;
+  -moz-box-shadow: 0 0 0 2px #FFF, 0 0 0 2px #FFF inset;
+  -webkit-box-shadow: 0 0 0 2px #FFF, 0 0 0 2px #FFF inset;
+  border-radius: 0 4px 4px 4px;
+  z-index: 100000000;
+  background: rgba(255, 255, 255, 0.9);
+}
+.ast-node-details.hidden {
+  display: none;
+}
+.ast-node-details > .element {
+  font-family: monospace;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.ast-offscreen-text {
+  position: absolute;
+  left: -5000px;
+  top: -5000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -1,0 +1,290 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+<!DOCTYPE html>
+<html><head><script type="text/javascript" id="__gaOptOutExtension">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Welcome to Gomix!</title>
+    <meta name="description" content="A cool thing made with Gomix">
+    <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Paperplane_files/semantic.css">
+    <link rel="stylesheet" href="Paperplane_files/style.css">
+    
+  <script src="Paperplane_files/AccessEngine.js" data-la-injected="levelaccess-engine" data-ae_invis="true"></script><script src="Paperplane_files/LevelAccess-AST.js" data-la-injected="levelaccess-ast-js" data-ae_invis="true"></script><link rel="stylesheet" href="Paperplane_files/LevelAccess-AST.css" data-la-injected="levelaccess-ast-css" data-ae_invis="true"></head>
+  <body id="example">
+    
+    <section class="main ui container">
+      <h1 class="ui header">Paper Plane - Javascript Developer Assignment - Alarm clock</h1>
+      <h4 class="ui horizontal divider header">Screen 1 - Digital Clock</h4>
+      <!-- this is your first screen that shows current time and date -->
+    <section class="wrap" id="clock">
+      <div class="navbar">
+        <h1>Clock</h1>
+      </div>
+      <div class="page">
+        <div class="clock">
+          15:45:22
+          <small>Mon 22 Jan, 2016</small>
+        </div>
+      </div>
+      
+      
+      <div class="toolbar">
+          <div class="toolbar-inner">
+            <a href="#" class="link">Clock</a>
+            <a href="#" class="link">Alarm</a>
+          </div>
+        </div>
+    </section>
+    <h4 class="ui horizontal divider header">Screen 2 - Alarm list</h4>
+    <!-- this is your second screen that list alarms-->
+    <section class="wrap" id="clock">
+      <div class="navbar">
+        <a class="pills left editAlarms">Edit</a>
+        <h1>Alarm</h1>
+        <a class="pills right addAlarm">Add</a>
+      </div>
+      <div class="page">
+        <!-- show this when no alarms are set -->
+        <div class="clock">
+          <p>No Alarms set</p>
+        </div>
+            <ul class="list">
+              <li class="item">
+                <label href="#" data-template="about" data-context-name="about" class="item-link item-content">
+                  <a href="" class="remove">X</a>
+                  <input type="checkbox" checked="checked">
+                  <strong>06:20 <sub>AM</sub></strong>
+                  <small>Morning walk, Everyday</small>
+                </label>
+              </li>
+              <li class="item off">
+                <label href="#" data-template="about" data-context-name="about" class="item-link item-content">
+                  <a href="" class="remove">X</a>
+                  <input type="checkbox">
+                  <strong>09:00 <sub>AM</sub></strong>
+                  <small>Weekly Catch up, Monday</small>
+                </label>
+              </li>
+              <li class="item">
+                <label href="#" data-template="about" data-context-name="about" class="item-link item-content">
+                  <a href="" class="remove">X</a>
+                  <input type="checkbox" checked="checked">
+                  <strong>10:20 <sub>AM</sub></strong>
+                  <small>Daily Standup, Weekdays</small>
+                </label>
+              </li>
+            </ul>
+      </div>
+      
+      <div class="toolbar">
+          <div class="toolbar-inner">
+            <a href="#" class="link">Clock</a>
+            
+          </div>
+        </div>
+    </section>
+    <h4 class="ui horizontal divider header">Screen 3 - Edit/Delete Alarms</h4>
+    <!-- this is your third screen that lets select any alarm to edit or delete -->
+    <section class="wrap" id="alarmList">
+      <div class="navbar">
+        <a class="pills left editAlarms">Done</a>
+        <h1>Edit Alarm</h1>
+        
+      </div>
+      <div class="page">
+        
+            <ul class="list">
+              <li class="item edit">
+                <a href="" class="remove">X</a>
+                <label href="#" data-template="about" data-context-name="about" class="item-link item-content">
+                  
+                  <input type="checkbox" checked="checked">
+                  <strong>06:20 <sub>AM</sub></strong>
+                  <small>Morning walk, Everyday</small>
+                </label>
+              </li>
+              <li class="item off edit">
+                <a href="" class="remove">X</a>
+                <label href="#" data-template="about" data-context-name="about" class="item-link item-content">
+                  
+                  <input type="checkbox">
+                  <strong>09:00 <sub>AM</sub></strong>
+                  <small>Weekly Catch up, Monday</small>
+                </label>
+              </li>
+              <li class="item edit">
+                <a href="" class="remove">X</a>
+                <label href="#" data-template="about" data-context-name="about" class="item-link item-content">
+                  
+                  <input type="checkbox" checked="checked">
+                  <strong>10:20 <sub>AM</sub></strong>
+                  <small>Daily Standup, Weekdays</small>
+                </label>
+              </li>
+            </ul>
+      </div>
+      
+    </section>
+    
+    <h4 class="ui horizontal divider header">Screen 4 - Add/edit alarm</h4>
+    
+    
+    
+    <!-- this is your fourth screen that allows you to add or edit an alarm -->
+    <section class="wrap" id="AddEdit">
+      <div class="navbar">
+        <a class="pills left cancel">Cancel</a>
+        <h1>Alarm/Edit</h1>
+        <a class="pills right save">Save</a>
+      </div>
+      <div class="page">
+          <div class="content-block-title">Select Time</div>
+          <div class="content-block-inner">
+            <p>
+              <select>
+              <option selected="selected">HH</option>
+            </select>
+            <select>
+              <option selected="selected">MM</option>
+            </select>
+            <select>
+              <option selected="selected">AM</option>
+            </select>
+            </p>
+            
+              <p class="item select selected">
+                <label href="#" for="Snooze">
+                  <input type="checkbox" checked="checked">
+                  <span>Snooze</span>
+                </label>
+              </p>
+            <p class="item select selected">
+                <label href="#" for="Snooze">
+                  <input type="text">
+                  <span>Label</span>
+                </label>
+              </p>
+         
+            
+          </div>  
+        
+        <div class="content-block-title">Repeat</div>
+        <ul class="list">
+              <li class="item select selected">
+                <label href="#" for="Monday">
+                  <input type="checkbox" id="Monday">
+                  <span>Monday</span>
+                </label>
+              </li>
+              <li class="item select selected">
+                <label href="#" for="Tuesday">
+                  <input type="checkbox" id="Tuesday">
+                  <span>Tuesday</span>
+                </label>
+              </li>
+            <li class="item select selected">
+                <label href="#" for="Wednesday">
+                  <input type="checkbox" id="Wednesday">
+                  <span>Wednesday</span>
+                </label>
+              </li>
+          
+          <li class="item select selected">
+                <label href="#" for="Thursday">
+                  <input type="checkbox" id="Thursday">
+                  <span>Thursday</span>
+                </label>
+              </li>
+          <li class="item select selected">
+                <label href="#" for="Friday">
+                  <input type="checkbox" id="Friday">
+                  <span>Friday</span>
+                </label>
+              </li>
+          <li class="item select selected">
+                <label href="#" for="Saturday">
+                  <input type="checkbox" id="Saturday">
+                  <span>Saturday</span>
+                </label>
+              </li>
+          <li class="item select selected">
+                <label href="#" for="Sunday">
+                  <input type="checkbox" id="Sunday">
+                  <span>Sunday</span>
+                </label>
+              </li>
+              
+            </ul>
+        <div class="content-block-title">Sound</div>
+        <ul class="list">
+          <li class="item select selected">
+                <label href="#" for="None">
+                  <input type="radio" id="None" name="sound" checked="checked">
+                  <span>None</span>
+                </label>
+              </li>
+              <li class="item select selected">
+                <label href="#" for="Radar">
+                  <input type="radio" id="Radar" name="sound">
+                  <span>Radar</span>
+                </label>
+              </li>
+          <li class="item select selected">
+                <label href="#" for="Beep">
+                  <input type="radio" id="Beep" name="sound">
+                  <span>Beep</span>
+                </label>
+              </li>
+          
+              
+            </ul>
+      </div>
+      <div class="action">
+        <!-- show this if you are adding alarm -->
+        <a href="#" data-panel="left" class="button open-panel">Save Alarm</a>
+        <!-- show this if you are editing alarm -->
+        <a href="#" data-panel="left" class="button open-panel danger">Delete Alarm</a>
+      </div>
+    </section>
+    <h4 class="ui horizontal divider header">Screen 5 - Play Alarm</h4>
+    <!-- this is your fifth screen that beeps the alarm -->
+    <section class="wrap" id="AlarmPLaying">
+      <div class="page alarm">
+          <div class="clock">
+          15:45:22
+          <small>Mon 22 Jan, 2016</small>
+            <p class="">
+            Morning Walk
+          </p>
+          </div>
+          
+          <div class="action">
+            <a href="#" data-panel="left" class="button open-panel">Snooze</a>
+            <a href="#" data-panel="left" class="button small">Stop</a>
+          </div>
+          
+      
+      </div>
+    </section>
+
+    <footer>
+       Javascript assignment by <a href="https://www.paperplane.net/">Paperplane
+      </a> 
+    </footer>
+    </section>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="Paperplane_files/jquery-2.json" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+    <script src="Paperplane_files/client.json"></script>
+
+  
+
+<div id="level-access-access-assistant-highlight-container" data-ae_invis="true"></div></body></html>
