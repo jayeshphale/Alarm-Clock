@@ -64,4 +64,11 @@ npm run build
 
 This repository includes legacy UI assets from the original Paperplane template while preserving the React application structure. App-specific styling is applied in `src/styles.css` to ensure consistent layout and readability.
 
+## Assumptions
+
+- Alarms are managed locally in the browser and do not persist to a backend server.
+- The app uses browser-based state and does not include user authentication.
+- Legacy Paperplane template assets are preserved for reference, with app-specific overrides applied in `src/styles.css`.
+- The live demo is hosted on Vercel and reflects the current deployed repository state.
+
 
